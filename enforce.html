@@ -52,7 +52,70 @@
 <section class="section-warm">
 <div class="container">
 <div class="section-header">
-<span class="eyebrow">02 &mdash; Why it matters</span>
+<span class="eyebrow">02 &mdash; Three starting points</span>
+<h2>Three ways to start. One governed destination.</h2>
+<p>Start from plain English, a real Word or PDF document, or policy-as-code. AI-mediated rule extraction proposes candidate rules; a side-by-side review flow shows source policy on one side and generated code on the other, with syntax validation. Each rule carries severity (Critical / High / Medium / Low) and confidence.</p>
+</div>
+<div class="card-grid cols-3">
+<div class="card boxed">
+<span class="icon icon-secure-doc sm" style="background-color:var(--copper);margin-bottom:14px"></span>
+<span class="tag">Mode 1</span>
+<h4>Plain English</h4>
+<p>Paste plain-English policy and click &ldquo;Analyze &amp; Generate Rules.&rdquo; Candidate rules return with severity, generated Rego, and confidence &mdash; ready for the Rule Review Wizard.</p>
+</div>
+<div class="card boxed">
+<span class="icon icon-architecture sm" style="background-color:var(--copper);margin-bottom:14px"></span>
+<span class="tag">Mode 2</span>
+<h4>Upload Document</h4>
+<p>Ingest real Word and PDF source documents directly. Extraction proposes candidate rules; the wizard takes it from there. Source and code stay linked as a single object.</p>
+</div>
+<div class="card boxed">
+<span class="icon icon-secure-arch sm" style="background-color:var(--copper);margin-bottom:14px"></span>
+<span class="tag">Mode 3</span>
+<h4>Policy-as-Code</h4>
+<p>Author or paste policy-as-code directly. Save, validate, and commit through the same governed review flow used for the other two modes.</p>
+</div>
+</div>
+
+<div class="exhibit" style="margin-top:56px">
+<div class="exhibit-head">
+<span class="num"><em>Exhibit</em></span>
+<span class="title">Rule Review Wizard</span>
+</div>
+<div class="exhibit-body">
+<div class="cols-2 equal">
+<div>
+<h5 style="margin-bottom:10px">Source Policy</h5>
+<p style="font-family:'Fraunces',serif;font-size:15px;color:var(--ink);line-height:1.55;border-left:2px solid var(--copper);padding-left:16px;max-width:none">&ldquo;Any adverse underwriting determination must include a documented reason, be reviewable within 30 days, and be retained for seven years.&rdquo;</p>
+</div>
+<div>
+<h5 style="margin-bottom:10px">Generated Rule &middot; Rego</h5>
+<pre style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;background:var(--cream-warm);border:1px solid var(--line);padding:16px;margin:0;white-space:pre-wrap;color:var(--ink)">package underwriting.adverse
+
+deny[msg] {
+  input.determination.adverse == true
+  not input.determination.reason
+  msg := "adverse determination missing reason"
+}
+
+review_due[d] {
+  input.determination.adverse == true
+  d := time.add_date(
+    input.determination.at, 0, 0, 30)
+}</pre>
+<p style="margin-top:12px;font-size:13px;color:var(--ink-mid)"><strong style="color:var(--copper)">Severity</strong> High &middot; <strong style="color:var(--copper)">Confidence</strong> 0.92 &middot; <strong style="color:var(--copper)">Status</strong> Awaiting review</p>
+</div>
+</div>
+<p style="margin-top:24px;font-size:14px;color:var(--ink-mid);font-style:italic;font-family:'Fraunces',serif">Accept &amp; Commit &middot; Accept with Edits &middot; Skip. Approved rules land in the Policy Reference Library as Draft, then published.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section-cream">
+<div class="container">
+<div class="section-header">
+<span class="eyebrow">03 &mdash; Why it matters</span>
 <h2>When governance stays trapped in documents, drift is inevitable.</h2>
 </div>
 <div class="body-text">
@@ -64,29 +127,46 @@
 <section class="section-brown">
 <div class="container">
 <div class="section-header on-dark">
-<span class="eyebrow on-dark">03 &mdash; Live governance intelligence</span>
+<span class="eyebrow on-dark">04 &mdash; Live governance intelligence</span>
 <h2>Built for live governance intelligence.</h2>
 <p>Enforce is not just a policy library. It also supports governed internal operations through patterns, temporal analysis, absence detection, AI model governance monitoring, concentration visibility for internal operations, regulatory change lag awareness, and governance completeness assessment. Vendor-specific intelligence belongs in Stronghold Vendor Sentinel&trade; when that module is licensed.</p>
 </div>
 <div class="card-grid cols-3">
-<div class="card on-dark"><span class="icon icon-pulse sm on-dark" style="margin-bottom:14px"></span><h4>Pattern intelligence</h4><p>Behavioral patterns, temporal analysis, and absence detection across governed internal operations.</p></div>
-<div class="card on-dark"><span class="icon icon-ai sm on-dark" style="margin-bottom:14px"></span><h4>AI model governance</h4><p>Monitoring of AI model behavior against governance policy.</p></div>
-<div class="card on-dark"><span class="icon icon-analytics sm on-dark" style="margin-bottom:14px"></span><h4>Concentration visibility</h4><p>Visibility into concentration of risk and activity across internal operations.</p></div>
-<div class="card on-dark"><span class="icon icon-regulatory sm on-dark" style="margin-bottom:14px"></span><h4>Regulatory change lag</h4><p>Awareness of where operational practice has drifted from updated policy.</p></div>
-<div class="card on-dark"><span class="icon icon-global sm on-dark" style="margin-bottom:14px"></span><h4>Completeness assessment</h4><p>Governance completeness assessment across the operating model.</p></div>
-<div class="card on-dark"><span class="icon icon-secure-doc sm on-dark" style="margin-bottom:14px"></span><h4>Side-by-side review</h4><p>Source policy on one side, generated code on the other, with syntax validation.</p></div>
+<div class="card on-dark"><span class="icon icon-pulse sm on-dark" style="margin-bottom:14px"></span><h4>Pattern intelligence</h4><p>Behavioral patterns, temporal analysis, and absence detection across governed internal operations. Fifteen active patterns, sector-aware, with drill-down to the underlying signal.</p></div>
+<div class="card on-dark"><span class="icon icon-ai sm on-dark" style="margin-bottom:14px"></span><h4>AI model governance</h4><p>Monitoring of AI model behavior against governance policy. Pattern 14 surfaces third-party AI risk where model outputs drift from documented intent.</p></div>
+<div class="card on-dark"><span class="icon icon-analytics sm on-dark" style="margin-bottom:14px"></span><h4>Concentration visibility</h4><p>Visibility into concentration of risk and activity across internal operations &mdash; by sector, business unit, process, or control &mdash; so over-reliance is visible before it matters.</p></div>
+<div class="card on-dark"><span class="icon icon-regulatory sm on-dark" style="margin-bottom:14px"></span><h4>Regulatory change lag</h4><p>Awareness of where operational practice has drifted from updated policy. When a regulation changes, lag is quantified and surfaced, not inferred.</p></div>
+<div class="card on-dark"><span class="icon icon-global sm on-dark" style="margin-bottom:14px"></span><h4>Completeness assessment</h4><p>Governance completeness assessment across the operating model. See which controls have policy, which have enforceable logic, and which have neither.</p></div>
+<div class="card on-dark"><span class="icon icon-secure-doc sm on-dark" style="margin-bottom:14px"></span><h4>Policy Reference Library</h4><p>Multi-filter policy library (Source / Status / Category), six sector views including Cross-Sector, with linked regulations attached to each policy object. Bulk retire requires reason.</p></div>
 </div>
 </div>
 </section>
 
 <section class="section-cream">
 <div class="container">
-<div class="section-header center">
+<div class="section-header">
+<span class="eyebrow">05 &mdash; Decision engine integrations</span>
+<h2>Governed logic. Executed where you run it.</h2>
+<p>Generated logic can target the decision infrastructure you already run. Enforce authors the governed object; your engine runs the decision.</p>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:14px;margin-top:20px">
+<span style="display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border:1px solid var(--line);background:#fff;font-family:'Inter',sans-serif;font-size:14px;font-weight:500;color:var(--ink)"><span style="color:var(--copper);font-weight:600">01</span> IBM ODM</span>
+<span style="display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border:1px solid var(--line);background:#fff;font-family:'Inter',sans-serif;font-size:14px;font-weight:500;color:var(--ink)"><span style="color:var(--copper);font-weight:600">02</span> Drools</span>
+<span style="display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border:1px solid var(--line);background:#fff;font-family:'Inter',sans-serif;font-size:14px;font-weight:500;color:var(--ink)"><span style="color:var(--copper);font-weight:600">03</span> FICO Blaze Advisor</span>
+<span style="display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border:1px solid var(--line);background:#fff;font-family:'Inter',sans-serif;font-size:14px;font-weight:500;color:var(--ink)"><span style="color:var(--copper);font-weight:600">04</span> Open Policy Agent (OPA)</span>
+<span style="display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border:1px solid var(--line);background:#fff;font-family:'Inter',sans-serif;font-size:14px;font-weight:500;color:var(--ink)"><span style="color:var(--copper);font-weight:600">05</span> Custom</span>
+</div>
+</div>
+</section>
+
+<section class="section-brown">
+<div class="container">
+<div class="section-header center on-dark">
 <h2>Move policy from document shelf to operational logic.</h2>
 </div>
 <div class="cta-row center">
-<a href="contact.html" class="btn btn-primary">Request a Demo</a>
-<a href="contact.html" class="btn btn-secondary">Discuss a Pilot</a>
+<a href="contact.html" class="btn btn-copper">Request a Demo</a>
+<a href="contact.html" class="btn btn-ghost">Discuss a Pilot</a>
 </div>
 </div>
 </section>
@@ -124,7 +204,7 @@
 </div>
 <div class="footer-bottom">
 <div class="row"><span>&copy; 2026 Cedar Fort Digital Inc. All rights reserved.</span></div>
-<p class="trademarks">Stronghold&trade;, Stronghold&trade; Governance Operations Suite, Stronghold Assurance Operations Engine&trade;, Stronghold Enforce&trade;, Stronghold Governance Core&trade;, Stronghold Oversight Intelligence&trade;, Stronghold Vendor Sentinel&trade;, Assurance by Design&trade;, Human Factor Framework&trade;, and Human-in-the-Loop are trademarks of Cedar Fort Digital Inc.</p>
+<p class="trademarks">Stronghold&trade;, Stronghold&trade; Governance Operations Suite, Stronghold Assurance Operations Engine&trade;, Stronghold Enforce&trade;, Stronghold Governance Core&trade;, Stronghold Oversight Intelligence&trade;, Stronghold Vendor Sentinel&trade;, Assurance by Design&trade;, Human Factor Framework&trade;, and Human-in-the-Loop are trademarks of Cedar Fort Digital Inc. Stronghold&trade; is Patent Pending.</p>
 </div>
 </div>
 </footer>
