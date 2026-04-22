@@ -15,13 +15,26 @@
 
 <nav class="site-nav">
 <div class="container">
-<a href="index.html" class="brand"><img src="images/Logos/Cedar%20Fort%20Digital%20Logo%20Trans.png" alt="Cedar Fort Digital"></a>
+<a href="index.html" class="brand">
+<img src="images/Logos/Cedar%20Fort%20Digital%20Logo%20Trans.png" alt="Cedar Fort Digital">
+</a>
 <div class="links" id="navlinks">
-<a href="assurance-by-design.html">Assurance by Design&trade;</a>
-<a href="products.html" class="current">Products</a>
-<a href="standards.html">Standards</a>
-<a href="government.html">Government</a>
-<a href="about.html">About</a>
+<a href="index.html" >Home</a>
+<a href="assurance-by-design.html" >Assurance by Design&trade;</a>
+<div class="nav-dropdown">
+<a href="products.html" class="nav-dropdown-toggle current">Products</a>
+<div class="nav-dropdown-menu">
+<a href="products.html">All Products &mdash; Overview</a>
+<a href="assurance-operations-engine.html" class="current">Stronghold Assurance Operations Engine&trade;</a>
+<a href="enforce.html" >Stronghold Enforce&trade;</a>
+<a href="governance-core.html" >Stronghold Governance Core&trade;</a>
+<a href="oversight-intelligence.html" >Stronghold Oversight Intelligence&trade;</a>
+<a href="vendor-sentinel.html" >Stronghold Vendor Sentinel&trade;</a>
+</div>
+</div>
+<a href="standards.html" >Standards &amp; Regulatory Alignment</a>
+<a href="government.html" >Government / Public Sector</a>
+<a href="about.html" >About</a>
 <a href="contact.html" class="cta">Contact</a>
 </div>
 <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
@@ -30,6 +43,7 @@
 
 <section class="hero compact page-lead">
 <div class="container">
+<img class="product-mark" src="images/Logos/Stronghold%20Flat%20Copper%20Trans.PNG" alt="Stronghold">
 <span class="eyebrow on-dark">Flagship Operating Application</span>
 <h1>Live assurance operations <em class="accent">for consequential work.</em></h1>
 <p class="lead">The Stronghold Assurance Operations Engine&trade; is the flagship operating application inside the Stronghold suite. It turns live signals into structured determinations, findings, remediation workflows, workpapers, review, escalation, sealed evidence, and oversight-ready outputs.</p>
@@ -43,14 +57,49 @@
 <h2>From signal to sealed evidence.</h2>
 <p>Signals enter the Intelligence Signal Queue with pattern context, severity, and reasoning support &mdash; classified against fifteen active governance patterns. Analysts investigate, document procedures and evidence, and make determinations with mandatory reasoning before anything is accepted, escalated, or dismissed. Work moves into governed workpapers; Calibration Mentors review, coach, return, escalate, or approve. The governed record then feeds executive oversight and board-ready outputs.</p>
 </div>
-<div class="flow">
-<div class="flow-step"><span class="flow-num">01</span><span class="flow-label">Intelligence Signal Queue</span></div>
-<div class="flow-step"><span class="flow-num">02</span><span class="flow-label">Investigation</span></div>
-<div class="flow-step"><span class="flow-num">03</span><span class="flow-label">Determination with Reasoning</span></div>
-<div class="flow-step"><span class="flow-num">04</span><span class="flow-label">Governed Workpapers</span></div>
-<div class="flow-step"><span class="flow-num">05</span><span class="flow-label">Calibration &amp; Review</span></div>
-<div class="flow-step"><span class="flow-num">06</span><span class="flow-label">Sealed Evidence</span></div>
-<div class="flow-step"><span class="flow-num">07</span><span class="flow-label">Oversight Output</span></div>
+<div class="flow-rich">
+<div class="flow-step-rich">
+<div class="icon-chip"><span class="icon icon-signal"></span></div>
+<span class="step-num">01</span>
+<h4>Intelligence Signal Queue</h4>
+<p>AI-classified against the Pattern Object Model with severity, risk score, and reasoning support.</p>
+</div>
+<div class="flow-step-rich">
+<div class="icon-chip"><span class="icon icon-analytics"></span></div>
+<span class="step-num">02</span>
+<h4>Investigation</h4>
+<p>Pattern details, AI reasoning, evidence sufficiency checklist &mdash; in one place.</p>
+</div>
+<div class="flow-step-rich">
+<div class="icon-chip"><span class="icon icon-judgement"></span></div>
+<span class="step-num">03</span>
+<h4>Determination</h4>
+<p>Accept, Escalate, or Dismiss &mdash; each requires written reasoning. No silent approvals.</p>
+</div>
+<div class="flow-step-rich">
+<div class="icon-chip"><span class="icon icon-secure-arch"></span></div>
+<span class="step-num">04</span>
+<h4>Governed Workpapers</h4>
+<p>Title, objective, scope, procedures, evidence, and conclusion as a single governed object.</p>
+</div>
+<div class="flow-step-rich">
+<div class="icon-chip"><span class="icon icon-human-loop"></span></div>
+<span class="step-num">05</span>
+<h4>Calibration &amp; Review</h4>
+<p>Mentors review, coach, return, escalate, or approve. Calibration alignment tracked over time.</p>
+</div>
+<div class="flow-step-rich">
+<div class="icon-chip"><span class="icon icon-vault"></span></div>
+<span class="step-num">06</span>
+<h4>Sealed Evidence</h4>
+<p>Immutable vault. Packet ID, timestamp, hash, attestation. Append-only.</p>
+</div>
+<div class="flow-step-rich">
+<div class="icon-chip"><span class="icon icon-oversight"></span></div>
+<span class="step-num">07</span>
+<h4>Oversight Output</h4>
+<p>Feeds Board Brief, Exam Readiness, Packet Builder, and executive intelligence.</p>
+</div>
 </div>
 
 <div class="exhibit" style="margin-top:72px">
@@ -75,6 +124,16 @@
 <p style="margin-top:22px;font-size:14px;color:var(--ink-mid);font-style:italic;font-family:'Fraunces',serif">Each finding carries Criteria &middot; Condition &middot; Cause &middot; Effect &middot; Recommendation. Repeat-finding indicators surface automatically.</p>
 </div>
 </div>
+
+<figure class="product-shot">
+<img src="images/Graphics/AOE-Signal-Open.png" alt="Stronghold Intelligence Signal Queue showing SIG-00501, HIGH severity, assigned status, Segregation of Duties Drift pattern. Risk score 8.50. AI Reasoning panel, Pattern Details (PAT-02, same_user_initiate_approve), Evidence Sufficiency Checklist, and professional judgment textarea for the analyst determination.">
+<figcaption><span class="shot-label">Exhibit 02 &middot; Intelligence Signal Queue</span>AI-classified signals from the Pattern Object Model. Each signal surfaces with pattern context, severity, risk score, AI reasoning, and a governed evidence-sufficiency checklist. Analysts cannot submit a determination without written reasoning.</figcaption>
+</figure>
+
+<figure class="product-shot">
+<img src="images/Graphics/AOE-Signal-Determined.png" alt="Stronghold signal SIG-00387, CRITICAL severity, determined. 'Late execution detected in Life Insurance sector.' Risk score 8.60. Pattern PAT-01 Control Execution Integrity, sub-type late_execution. Determination confirmed with 'Sealed to immutable vault' timestamp.">
+<figcaption><span class="shot-label">Exhibit 03 &middot; Sealed to the Immutable Vault</span>Determination confirmed. Finding documented. Sealed to the immutable vault with a timestamp. From this point on, the record is append-only &mdash; reviewable, traceable, and archive-grade.</figcaption>
+</figure>
 </div>
 </section>
 
@@ -105,6 +164,11 @@
 <div class="card"><span class="card-num">V.</span><h4>Shared visibility</h4><p>The same governed record spans analyst, mentor, architect, and Assurance Authority. What the CAE sees in a board packet is what the analyst captured at the signal.</p></div>
 <div class="card"><span class="card-num">VI.</span><h4>Opportunity Flow</h4><p>Turn governed insight into voluntary, value-creating action. Teams can do more than document problems &mdash; they help improve the system in real time, with judgment, prioritization, and collaboration supported along the way.</p></div>
 </div>
+
+<figure class="product-shot">
+<img src="images/Graphics/AOE-My-Signals.png" alt="Stronghold My Signals dashboard. Signal Analyst view, Life Insurance sector. Metric tiles: Active Signals 8, Pending Calibration 3, Returned-Action Required 1, Avg Confidence 88%, Calibration Rate 94.1%. Intelligence Signal Queue panel showing SIG-00085 CRITICAL, Temporal Risk Clustering pattern, risk score 9.50, 'Control execution rate elevated 280% in pre-audit window.'">
+<figcaption><span class="shot-label">Exhibit 04 &middot; My Signals &middot; Signal Analyst view</span>Active signals, pending calibration, returned work, average confidence, and the analyst&rsquo;s current calibration rate &mdash; all at a glance. The same governed record the CAE will see in the board packet.</figcaption>
+</figure>
 </div>
 </section>
 
@@ -133,6 +197,24 @@
 <div class="cta-row center">
 <a href="contact.html" class="btn btn-primary">Request a Demo</a>
 <a href="contact.html" class="btn btn-secondary">Discuss a Pilot</a>
+</div>
+</div>
+</section>
+
+<!-- SUITE NAV -->
+<section class="suite-nav">
+<div class="container">
+<div class="suite-head">
+<span class="eyebrow">The Suite</span>
+<h2>Continue exploring.</h2>
+<p>Five components. One governed operating environment.</p>
+</div>
+<div class="suite-nav-grid">
+<div class="suite-nav-card current"><span class="tag">Flagship &middot; You are here</span><h4>Stronghold Assurance Operations Engine&trade;</h4><p>Live signals, determinations, workpapers, review, and sealed evidence.</p><span class="arrow">Current page</span></div>
+<a href="enforce.html" class="suite-nav-card"><span class="tag">Included</span><h4>Stronghold Enforce&trade;</h4><p>Plain English, Word, PDF, or policy-as-code becomes executable governance logic.</p><span class="arrow">Read more &rarr;</span></a>
+<a href="governance-core.html" class="suite-nav-card"><span class="tag">Foundation</span><h4>Stronghold Governance Core&trade;</h4><p>Immutable vault, governed state model, role-aware access, and enterprise controls.</p><span class="arrow">Read more &rarr;</span></a>
+<a href="oversight-intelligence.html" class="suite-nav-card"><span class="tag">Premium</span><h4>Stronghold Oversight Intelligence&trade;</h4><p>Nine AI tools, Packet Builder, branded PowerPoint, and framework-labeled appendices.</p><span class="arrow">Read more &rarr;</span></a>
+<a href="vendor-sentinel.html" class="suite-nav-card"><span class="tag">Premium</span><h4>Stronghold Vendor Sentinel&trade;</h4><p>Live vendor and third-party governance. Telemetry, tiering, dependency, and resilience.</p><span class="arrow">Read more &rarr;</span></a>
 </div>
 </div>
 </section>

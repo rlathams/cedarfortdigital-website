@@ -15,13 +15,26 @@
 
 <nav class="site-nav">
 <div class="container">
-<a href="index.html" class="brand"><img src="images/Logos/Cedar%20Fort%20Digital%20Logo%20Trans.png" alt="Cedar Fort Digital"></a>
+<a href="index.html" class="brand">
+<img src="images/Logos/Cedar%20Fort%20Digital%20Logo%20Trans.png" alt="Cedar Fort Digital">
+</a>
 <div class="links" id="navlinks">
-<a href="assurance-by-design.html">Assurance by Design&trade;</a>
-<a href="products.html" class="current">Products</a>
-<a href="standards.html">Standards</a>
-<a href="government.html">Government</a>
-<a href="about.html">About</a>
+<a href="index.html" >Home</a>
+<a href="assurance-by-design.html" >Assurance by Design&trade;</a>
+<div class="nav-dropdown">
+<a href="products.html" class="nav-dropdown-toggle current">Products</a>
+<div class="nav-dropdown-menu">
+<a href="products.html">All Products &mdash; Overview</a>
+<a href="assurance-operations-engine.html" >Stronghold Assurance Operations Engine&trade;</a>
+<a href="enforce.html" >Stronghold Enforce&trade;</a>
+<a href="governance-core.html" >Stronghold Governance Core&trade;</a>
+<a href="oversight-intelligence.html" >Stronghold Oversight Intelligence&trade;</a>
+<a href="vendor-sentinel.html" class="current">Stronghold Vendor Sentinel&trade;</a>
+</div>
+</div>
+<a href="standards.html" >Standards &amp; Regulatory Alignment</a>
+<a href="government.html" >Government / Public Sector</a>
+<a href="about.html" >About</a>
 <a href="contact.html" class="cta">Contact</a>
 </div>
 <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
@@ -30,6 +43,7 @@
 
 <section class="hero compact page-lead">
 <div class="container">
+<img class="product-mark" src="images/Logos/Stronghold%20Flat%20Copper%20Trans.PNG" alt="Stronghold">
 <span class="eyebrow on-dark">Premium Module &middot; Stand-alone capable</span>
 <h1>Vendor governance <em class="accent">at the speed of the operation.</em></h1>
 <p class="lead">Stronghold Vendor Sentinel&trade; is a premium module for live vendor and third-party governance. It treats vendors as operational components, not questionnaire records, and connects telemetry, policy, dependency, evidence, and oversight in one governed workspace.</p>
@@ -115,6 +129,16 @@
 <p>A timeline of material vendor changes &mdash; releases, model/version changes, subprocessor changes, contract/DPA changes, SLA incidents, security notices, support path changes. Unreviewed material changes are flagged until governance catches up.</p>
 </div>
 </div>
+
+<figure class="product-shot on-dark">
+<img src="images/Graphics/Sentinel-Evidence-Heatmap.png" alt="Stronghold Vendor Sentinel Evidence Sufficiency Heatmap. Real-time signal monitoring across 4 vendors: AWS GovCloud, LexisNexis Risk Solutions, Milliman, Verisk Analytics. 3 Live Feeds, 8 Anomalies. Metric tiles: Vendors Monitored 4, Signals 24h 1,376, Active Anomalies 8, Controls Tested 172, Controls Failing 8, Avg Risk Score 21. Heatmap grid across eight dimensions: Logging, Lineage/Replay, Validation, Incident, Fallback Docs, Contract, Review Currency, Governance Artifact. Cells colored Sufficient (green), Partial (yellow), Insufficient (red).">
+<figcaption><span class="shot-label">Exhibit 01 &middot; Evidence Sufficiency Heatmap</span>Governance evidence completeness across eight dimensions for every vendor in the governed environment. Four critical vendors insufficient, seven significant vendors partial, thirty-two dimensions evaluated. Click any cell to see what is missing and why it matters.</figcaption>
+</figure>
+
+<figure class="product-shot on-dark">
+<img src="images/Graphics/Sentinel-Heatmap-Detail.png" alt="Stronghold Vendor Sentinel heatmap drill-down modal. LexisNexis Risk Solutions, Tier 1. Lineage/Replay dimension marked Insufficient, 4 missing artifacts, last artifact 9/14/2025. Why This Matters: 'New AI-driven segmentation pipeline has no replay capability - cannot reconstruct decisions.'">
+<figcaption><span class="shot-label">Exhibit 02 &middot; Cell Drill-down</span>Every heatmap cell opens to the story behind it: what is missing, when the last artifact was filed, and why the insufficiency matters &mdash; not just a red square on a dashboard.</figcaption>
+</figure>
 </div>
 </section>
 
@@ -138,6 +162,24 @@
 <div class="cta-row center">
 <a href="contact.html" class="btn btn-copper">Request a Demo</a>
 <a href="contact.html" class="btn btn-ghost">Discuss a Pilot</a>
+</div>
+</div>
+</section>
+
+<!-- SUITE NAV -->
+<section class="suite-nav">
+<div class="container">
+<div class="suite-head">
+<span class="eyebrow">The Suite</span>
+<h2>Continue exploring.</h2>
+<p>Five components. One governed operating environment.</p>
+</div>
+<div class="suite-nav-grid">
+<a href="assurance-operations-engine.html" class="suite-nav-card"><span class="tag">Flagship</span><h4>Stronghold Assurance Operations Engine&trade;</h4><p>Live signals, determinations, workpapers, review, and sealed evidence.</p><span class="arrow">Read more &rarr;</span></a>
+<a href="enforce.html" class="suite-nav-card"><span class="tag">Included</span><h4>Stronghold Enforce&trade;</h4><p>Plain English, Word, PDF, or policy-as-code becomes executable governance logic.</p><span class="arrow">Read more &rarr;</span></a>
+<a href="governance-core.html" class="suite-nav-card"><span class="tag">Foundation</span><h4>Stronghold Governance Core&trade;</h4><p>Immutable vault, governed state model, role-aware access, and enterprise controls.</p><span class="arrow">Read more &rarr;</span></a>
+<a href="oversight-intelligence.html" class="suite-nav-card"><span class="tag">Premium</span><h4>Stronghold Oversight Intelligence&trade;</h4><p>Nine AI tools, Packet Builder, branded PowerPoint, and framework-labeled appendices.</p><span class="arrow">Read more &rarr;</span></a>
+<div class="suite-nav-card current"><span class="tag">Premium &middot; You are here</span><h4>Stronghold Vendor Sentinel&trade;</h4><p>Live vendor and third-party governance. Telemetry, tiering, dependency, and resilience.</p><span class="arrow">Current page</span></div>
 </div>
 </div>
 </section>
