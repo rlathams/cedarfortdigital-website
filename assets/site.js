@@ -15,11 +15,33 @@
         e.preventDefault();
         var btn = form.querySelector('button.submit');
         if (btn) {
-          btn.textContent = 'Thank you. We will be in touch.';
+          btn.textContent = 'Sending…';
           btn.disabled = true;
-          btn.style.background = 'var(--brown-mid)';
-          btn.style.cursor = 'default';
         }
+        fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        }).then(function (response) {
+          if (response.ok) {
+            if (btn) {
+              btn.textContent = 'Thank you. We will be in touch.';
+              btn.style.background = 'var(--brown-mid)';
+              btn.style.cursor = 'default';
+            }
+            form.reset();
+          } else {
+            if (btn) {
+              btn.textContent = 'Send failed — please email Rachel directly';
+              btn.disabled = false;
+            }
+          }
+        }).catch(function () {
+          if (btn) {
+            btn.textContent = 'Send failed — please email Rachel directly';
+            btn.disabled = false;
+          }
+        });
       });
     }
   });
