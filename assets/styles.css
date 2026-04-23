@@ -642,6 +642,12 @@ nav.site-nav .nav-dropdown-menu a:hover { background: var(--cream-warm); color: 
 .icon-secure-doc   { -webkit-mask-image: url('../images/icon-images/Secure%20doc.svg'); mask-image: url('../images/icon-images/Secure%20doc.svg'); }
 .icon-vendor-1     { -webkit-mask-image: url('../images/icon-images/vendor%20network%201.svg'); mask-image: url('../images/icon-images/vendor%20network%201.svg'); }
 .icon-vendor-2     { -webkit-mask-image: url('../images/icon-images/vendor%20network%202.svg'); mask-image: url('../images/icon-images/vendor%20network%202.svg'); }
+.icon-renewal-pack     { -webkit-mask-image: url('../images/vendor-icons/Renewal-Review-Pack%201.svg'); mask-image: url('../images/vendor-icons/Renewal-Review-Pack%201.svg'); }
+.icon-blast-radius     { -webkit-mask-image: url('../images/vendor-icons/Shared-Dependency-Blast-Radius%203.svg'); mask-image: url('../images/vendor-icons/Shared-Dependency-Blast-Radius%203.svg'); }
+.icon-exit-readiness   { -webkit-mask-image: url('../images/vendor-icons/Exit-Readiness-Simulator.svg'); mask-image: url('../images/vendor-icons/Exit-Readiness-Simulator.svg'); }
+.icon-friction         { -webkit-mask-image: url('../images/vendor-icons/Friction%20Override.svg'); mask-image: url('../images/vendor-icons/Friction%20Override.svg'); }
+.icon-evidence-heatmap { -webkit-mask-image: url('../images/vendor-icons/Evidence-Sufficiency-Heatmap%202.svg'); mask-image: url('../images/vendor-icons/Evidence-Sufficiency-Heatmap%202.svg'); }
+.icon-watchtower       { -webkit-mask-image: url('../images/vendor-icons/Vendor-Change-Watchtower%204.svg'); mask-image: url('../images/vendor-icons/Vendor-Change-Watchtower%204.svg'); }
 
 .icon-row {
   display: flex;
