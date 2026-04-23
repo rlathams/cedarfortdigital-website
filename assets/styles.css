@@ -143,9 +143,9 @@ strong { font-weight: 600; color: var(--ink); }
   .container, .container-narrow { padding: 0 22px; }
 }
 
-section { padding: 120px 0; }
-.section-sm { padding: 80px 0; }
-@media (max-width: 900px) { section { padding: 80px 0; } .section-sm { padding: 56px 0; } }
+section { padding: 80px 0; }
+.section-sm { padding: 56px 0; }
+@media (max-width: 900px) { section { padding: 56px 0; } .section-sm { padding: 40px 0; } }
 
 .section-cream { background: var(--cream); }
 .section-warm { background: var(--cream-warm); }
@@ -361,7 +361,7 @@ nav.site-nav .nav-dropdown-menu a:hover { background: var(--cream-warm); color: 
 .hero {
   background: var(--brown);
   color: var(--cream);
-  padding: 140px 0 120px;
+  padding: 100px 0 80px;
   position: relative;
   overflow: hidden;
 }
@@ -424,11 +424,11 @@ nav.site-nav .nav-dropdown-menu a:hover { background: var(--cream-warm); color: 
   margin-top: 28px;
   max-width: 720px;
 }
-.hero.compact { padding: 96px 0 84px; }
+.hero.compact { padding: 72px 0 56px; }
 .hero.compact h1 { font-size: clamp(34px, 4vw, 56px); }
 @media (max-width: 720px) {
-  .hero { padding: 96px 0 80px; }
-  .hero.compact { padding: 72px 0 56px; }
+  .hero { padding: 72px 0 56px; }
+  .hero.compact { padding: 56px 0 40px; }
 }
 
 /* --------------------------------------------------------
@@ -605,8 +605,8 @@ nav.site-nav .nav-dropdown-menu a:hover { background: var(--cream-warm); color: 
 -------------------------------------------------------- */
 .icon {
   display: inline-block;
-  width: 56px;
-  height: 56px;
+  width: 72px;
+  height: 72px;
   background-color: var(--copper);
   -webkit-mask-position: center;
   mask-position: center;
@@ -617,8 +617,8 @@ nav.site-nav .nav-dropdown-menu a:hover { background: var(--cream-warm); color: 
   flex-shrink: 0;
 }
 .icon.on-dark { background-color: var(--copper-light); }
-.icon.lg { width: 72px; height: 72px; }
-.icon.sm { width: 40px; height: 40px; }
+.icon.lg { width: 96px; height: 96px; }
+.icon.sm { width: 60px; height: 60px; }
 
 .icon-signal       { -webkit-mask-image: url('../images/icon-images/Signal.svg'); mask-image: url('../images/icon-images/Signal.svg'); }
 .icon-system       { -webkit-mask-image: url('../images/icon-images/system%20workflow.svg'); mask-image: url('../images/icon-images/system%20workflow.svg'); }
@@ -1126,7 +1126,7 @@ footer.site-footer .trademarks {
 }
 
 .flow-step-rich .icon-chip {
-  width: 72px; height: 72px;
+  width: 96px; height: 96px;
   background: var(--cream-warm);
   border: 1px solid var(--line);
   display: flex;
@@ -1136,7 +1136,7 @@ footer.site-footer .trademarks {
   flex-shrink: 0;
 }
 .flow-step-rich .icon-chip .icon {
-  width: 36px; height: 36px;
+  width: 52px; height: 52px;
   background-color: var(--copper);
 }
 
@@ -1322,12 +1322,12 @@ footer.site-footer .trademarks {
    Stronghold product mark (used on product page heroes)
 -------------------------------------------------------- */
 .product-mark {
-  height: 88px;
+  height: 128px;
   width: auto;
   margin-bottom: 28px;
   display: block;
 }
-@media (max-width: 720px) { .product-mark { height: 64px; margin-bottom: 20px; } }
+@media (max-width: 720px) { .product-mark { height: 88px; margin-bottom: 20px; } }
 
 /* --------------------------------------------------------
    Product screenshot (framed, with caption)
