@@ -131,16 +131,27 @@
 <section class="section-cream">
 <div class="container">
 <div class="section-header">
-<span class="eyebrow">05 &mdash; Decision engine integrations</span>
-<h2>Governed logic. Executed where you run it.</h2>
-<p>Generated logic can target the decision infrastructure you already run. Enforce authors the governed object; your engine runs the decision.</p>
+<span class="eyebrow">05 &mdash; Decisioning</span>
+<h2>Included by default. Integrations optional.</h2>
+<p>Stronghold includes a decisioning engine as part of <a href="governance-core.html">Stronghold Governance Core&trade;</a>. It is the only engine in the environment that accepts plain English, Word, PDF, or policy-as-code directly through the Rule Review Wizard. If you already run a different engine, Enforce also generates Rego to target external engines &mdash; but those require Rego or their native rule syntax, not plain English.</p>
 </div>
-<div style="display:flex;flex-wrap:wrap;gap:14px;margin-top:20px">
+
+<div class="card boxed" style="margin-top:32px;border-color:var(--copper);border-width:2px;background:#fff">
+<span class="tag" style="background:var(--copper);color:var(--cream);padding:4px 10px">Included &middot; Default</span>
+<h4>Stronghold decisioning engine</h4>
+<p>Part of Stronghold Governance Core&trade;. Accepts plain English, Word, PDF, or policy-as-code directly through the Rule Review Wizard &mdash; no Rego required. This is the engine Enforce authors into by default.</p>
+</div>
+
+<div style="margin-top:40px">
+<p style="font-family:'Inter',sans-serif;font-size:12px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--ink-mid);margin-bottom:16px">Optional integrations &middot; if you already run one of these</p>
+<div style="display:flex;flex-wrap:wrap;gap:14px">
 <span style="display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border:1px solid var(--line);background:#fff;font-family:'Inter',sans-serif;font-size:14px;font-weight:500;color:var(--ink)"><span style="color:var(--copper);font-weight:600">01</span> IBM ODM</span>
 <span style="display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border:1px solid var(--line);background:#fff;font-family:'Inter',sans-serif;font-size:14px;font-weight:500;color:var(--ink)"><span style="color:var(--copper);font-weight:600">02</span> Drools</span>
 <span style="display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border:1px solid var(--line);background:#fff;font-family:'Inter',sans-serif;font-size:14px;font-weight:500;color:var(--ink)"><span style="color:var(--copper);font-weight:600">03</span> FICO Blaze Advisor</span>
 <span style="display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border:1px solid var(--line);background:#fff;font-family:'Inter',sans-serif;font-size:14px;font-weight:500;color:var(--ink)"><span style="color:var(--copper);font-weight:600">04</span> Open Policy Agent (OPA)</span>
 <span style="display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border:1px solid var(--line);background:#fff;font-family:'Inter',sans-serif;font-size:14px;font-weight:500;color:var(--ink)"><span style="color:var(--copper);font-weight:600">05</span> Custom</span>
+</div>
+<p style="font-family:'Fraunces',serif;font-style:italic;font-size:14px;color:var(--ink-mid);margin-top:18px">External engines execute in Rego or their native rule syntax. Plain-English authoring stays in the Stronghold decisioning engine.</p>
 </div>
 </div>
 </section>
