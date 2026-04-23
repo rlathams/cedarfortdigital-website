@@ -377,8 +377,9 @@ nav.site-nav .nav-dropdown-menu a:hover { background: var(--cream-warm); color: 
 .hero .container { position: relative; z-index: 2; }
 .hero .label {
   display: flex;
-  align-items: center;
-  gap: 14px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
   font-size: 12px;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -386,7 +387,8 @@ nav.site-nav .nav-dropdown-menu a:hover { background: var(--cream-warm); color: 
   margin-bottom: 28px;
   font-weight: 500;
 }
-.hero .label img { height: 36px; width: auto; }
+.hero .label img { height: 128px; width: auto; }
+@media (max-width: 720px) { .hero .label img { height: 88px; } }
 .hero .label .brand-mark {
   display: flex;
   flex-direction: column;
