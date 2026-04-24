@@ -639,6 +639,106 @@ nav.site-nav .nav-dropdown-menu a:hover { background: var(--cream-warm); color: 
 .product-row.clickable > * { position: relative; z-index: 2; }
 .product-row.clickable a.read-more { z-index: 3; }
 
+/* Feature card modal triggers - keyboard-activatable cards that open
+   a shared #feature-modal when clicked. */
+.card.modal-trigger {
+  cursor: pointer;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+}
+.card.modal-trigger:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 36px rgba(26,17,8,0.10);
+}
+.card.modal-trigger.on-dark:hover {
+  box-shadow: 0 18px 36px rgba(0,0,0,0.30);
+  border-color: rgba(245,239,223,0.32);
+}
+.card.modal-trigger:focus-visible {
+  outline: 2px solid var(--copper);
+  outline-offset: 3px;
+}
+.card.modal-trigger::after {
+  content: '\2197';
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  font-size: 13px;
+  color: var(--ink-light);
+  opacity: 0;
+  transition: opacity 0.22s ease;
+}
+.card.modal-trigger { position: relative; }
+.card.modal-trigger:hover::after, .card.modal-trigger:focus-visible::after { opacity: 0.85; }
+.card.modal-trigger.on-dark::after { color: var(--copper-light); }
+
+/* The modal itself - singleton dropped on pages that use triggers. */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(26,17,8,0.70);
+  display: none;
+  align-items: flex-start;
+  justify-content: center;
+  z-index: 1000;
+  padding: 60px 20px 40px;
+  overflow-y: auto;
+}
+.modal-backdrop.is-open { display: flex; }
+.modal-dialog {
+  background: var(--cream);
+  max-width: 640px;
+  width: 100%;
+  padding: 48px 52px;
+  position: relative;
+  margin: auto;
+  box-shadow: 0 40px 80px rgba(0,0,0,0.35);
+  animation: modalIn 0.22s ease;
+}
+@keyframes modalIn {
+  from { opacity: 0; transform: translateY(-12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.modal-dialog .modal-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: none;
+  font-size: 30px;
+  line-height: 1;
+  color: var(--ink-mid);
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s, background 0.2s;
+}
+.modal-dialog .modal-close:hover { color: var(--copper); background: rgba(26,17,8,0.04); }
+.modal-dialog .modal-title {
+  font-family: 'Fraunces', serif;
+  font-size: 30px;
+  line-height: 1.2;
+  margin: 0 0 22px;
+  color: var(--ink);
+  padding-right: 40px;
+  font-variation-settings: 'opsz' 56, 'SOFT' 30;
+}
+.modal-dialog .modal-body {
+  font-family: 'Inter', sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--ink-soft);
+}
+.modal-dialog .modal-body p { margin: 0 0 14px; }
+.modal-dialog .modal-body p:last-child { margin-bottom: 0; }
+@media (max-width: 560px) {
+  .modal-dialog { padding: 36px 28px 32px; }
+  .modal-dialog .modal-title { font-size: 24px; }
+}
+
 /* Card variant: on brown (dark) band */
 .card.on-dark { border-top-color: rgba(245,239,223,0.25); }
 .card.on-dark .card-num { color: var(--copper-light); }

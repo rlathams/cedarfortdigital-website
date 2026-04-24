@@ -104,43 +104,43 @@
 <p>Sentinel&rsquo;s deeper capability direction includes reliance mapping, renewal review packs, shared dependency blast radius, exit readiness simulation, human override and vendor friction analytics, evidence sufficiency heatmaps, and vendor change watchtower workflows.</p>
 </div>
 <div class="card-grid cols-3">
-<div class="card on-dark">
+<div class="card on-dark modal-trigger">
 <span class="icon icon-vendor-1 sm on-dark" style="margin-bottom:14px"></span>
 <span class="card-num">I.</span>
 <h4>Reliance Mapper</h4>
 <p>See exactly how each vendor connects to business processes, decision workflows, internal controls, downstream systems, teams, findings, and remediation. An &ldquo;If vendor unavailable&rdquo; impact summary turns vendor governance into dependency governance.</p>
 </div>
-<div class="card on-dark">
+<div class="card on-dark modal-trigger">
 <span class="icon icon-renewal-pack sm on-dark" style="margin-bottom:14px"></span>
 <span class="card-num">II.</span>
 <h4>Pre-Renewal Governance Review Pack</h4>
 <p>Generate a governance-focused dossier for any upcoming renewal: trust/risk trend, incidents, SLA performance, evidence completeness, open signals, fallback status, concentration exposure, contract mismatch history, and a recommended governance posture.</p>
 </div>
-<div class="card on-dark">
+<div class="card on-dark modal-trigger">
 <span class="icon icon-blast-radius sm on-dark" style="margin-bottom:14px"></span>
 <span class="card-num">III.</span>
 <h4>Shared Dependency Blast Radius</h4>
 <p>Turn concentration risk into an actionable exposure model. See what happens when a shared upstream dependency fails &mdash; which vendors, processes, controls, and teams are exposed &mdash; with &ldquo;if unavailable / degraded / contract changes / logging lost&rdquo; scenario previews.</p>
 </div>
-<div class="card on-dark">
+<div class="card on-dark modal-trigger">
 <span class="icon icon-exit-readiness sm on-dark" style="margin-bottom:14px"></span>
 <span class="card-num">IV.</span>
 <h4>Exit Readiness Simulator</h4>
 <p>Model whether the institution can continue operating if a vendor degrades, fails, or must be exited. Readiness status (ready / partially ready / fragile / not ready) across outage, gradual degradation, forced exit, logging loss, and data-portability scenarios.</p>
 </div>
-<div class="card on-dark">
+<div class="card on-dark modal-trigger">
 <span class="icon icon-friction sm on-dark" style="margin-bottom:14px"></span>
 <span class="card-num">V.</span>
 <h4>Human Override &amp; Vendor Friction Analytics</h4>
 <p>Treat repeated override, manual correction, workaround, and escalation as a governance signal. Spot silent operational distrust before it becomes an incident. Friction trends correlate to incidents and SLA performance.</p>
 </div>
-<div class="card on-dark">
+<div class="card on-dark modal-trigger">
 <span class="icon icon-evidence-heatmap sm on-dark" style="margin-bottom:14px"></span>
 <span class="card-num">VI.</span>
 <h4>Evidence Sufficiency Heatmap</h4>
 <p>A board-friendly picture of whether each vendor has sufficient governance evidence: logging, lineage/replay, validation, incidents, fallback, contract completeness, review currency. Each cell drills to what is missing and why it matters.</p>
 </div>
-<div class="card on-dark">
+<div class="card on-dark modal-trigger">
 <span class="icon icon-watchtower sm on-dark" style="margin-bottom:14px"></span>
 <span class="card-num">VII.</span>
 <h4>Vendor Change Watchtower</h4>
@@ -215,6 +215,14 @@
 </div>
 </div>
 </footer>
+
+<div id="feature-modal" class="modal-backdrop" aria-hidden="true">
+<div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+<button class="modal-close" type="button" aria-label="Close">&times;</button>
+<h3 class="modal-title" id="modal-title"></h3>
+<div class="modal-body"></div>
+</div>
+</div>
 
 <script src="assets/site.js"></script>
 </body>
