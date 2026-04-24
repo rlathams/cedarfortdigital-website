@@ -322,6 +322,18 @@ nav.site-nav .links a { font-size: 13px; }
 
 /* Products dropdown */
 nav.site-nav .nav-dropdown { position: relative; }
+/* Invisible hover-bridge between trigger and menu so cursor can travel down to the menu without :hover dropping */
+nav.site-nav .nav-dropdown::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 18px;
+  pointer-events: none;
+}
+nav.site-nav .nav-dropdown:hover::after,
+nav.site-nav .nav-dropdown:focus-within::after { pointer-events: auto; }
 nav.site-nav .nav-dropdown-toggle::after {
   content: ' \25BE';
   font-size: 10px;
@@ -929,6 +941,8 @@ figure.frame figcaption {
   transition: opacity 0.25s;
 }
 .ecosystem .eco-logos img:hover { opacity: 1; }
+.ecosystem .eco-logos img.eco-logo-clay { height: 160px; }
+.ecosystem .eco-logos img.eco-logo-wbc { height: 84px; }
 .ecosystem .eco-disclaimer {
   font-family: 'Fraunces', serif;
   font-size: 13px;
