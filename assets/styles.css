@@ -1216,8 +1216,8 @@ footer.site-footer .footer-bottom {
 }
 footer.site-footer .footer-bottom p {
   color: rgba(245,239,223,0.88);
-  font-size: 14.5px;
-  line-height: 1.6;
+  font-size: 12px;
+  line-height: 1.55;
 }
 footer.site-footer .footer-bottom a {
   color: var(--copper-light);
