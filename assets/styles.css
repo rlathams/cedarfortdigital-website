@@ -1154,7 +1154,7 @@ form.contact-form .submit { margin-top: 14px; }
 -------------------------------------------------------- */
 footer.site-footer {
   background: var(--brown-deep);
-  color: rgba(245,239,223,0.66);
+  color: rgba(245,239,223,0.88);
   padding: 72px 0 40px;
   font-size: 14px;
   line-height: 1.7;
@@ -1211,8 +1211,22 @@ footer.site-footer .col a {
 footer.site-footer .col a:hover { color: var(--copper-light); }
 footer.site-footer .col a.current { color: var(--copper-light); }
 footer.site-footer .footer-bottom {
-  border-top: 1px solid rgba(245,239,223,0.1);
+  border-top: 1px solid rgba(245,239,223,0.18);
   padding-top: 28px;
+}
+footer.site-footer .footer-bottom p {
+  color: rgba(245,239,223,0.88);
+  font-size: 14.5px;
+  line-height: 1.6;
+}
+footer.site-footer .footer-bottom a {
+  color: var(--copper-light);
+  border-bottom: 1px solid rgba(198,139,79,0.4);
+  transition: color 0.2s, border-color 0.2s;
+}
+footer.site-footer .footer-bottom a:hover {
+  color: var(--cream);
+  border-bottom-color: var(--cream);
 }
 footer.site-footer .footer-bottom .row {
   display: flex;
@@ -1225,7 +1239,7 @@ footer.site-footer .footer-bottom .row {
 }
 footer.site-footer .trademarks {
   font-size: 11.5px;
-  color: rgba(245,239,223,0.35);
+  color: rgba(245,239,223,0.82);
   line-height: 1.7;
   letter-spacing: 0.1px;
 }
