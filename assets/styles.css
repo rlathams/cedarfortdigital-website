@@ -599,6 +599,46 @@ nav.site-nav .nav-dropdown-menu a:hover { background: var(--cream-warm); color: 
 }
 .card .card-link:hover { color: var(--copper); border-color: var(--copper); }
 
+/* Whole-card clickability: the inner .card-link stays the real <a>,
+   its ::after stretches to cover the card so clicks anywhere in the
+   card follow the link. Keeps semantics, keyboard tab, and a11y. */
+.card.clickable {
+  position: relative;
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+.card.clickable:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 36px rgba(26,17,8,0.12);
+}
+.card.clickable .card-link { position: static; }
+.card.clickable .card-link::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 1;
+}
+.card.clickable > * { position: relative; z-index: 2; }
+.card.clickable .card-link { z-index: 3; }
+
+/* Same pattern for the Products page product rows */
+.product-row.clickable {
+  position: relative;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, background-color 0.22s ease;
+}
+.product-row.clickable:hover {
+  transform: translateY(-2px);
+  background-color: rgba(26,17,8,0.015);
+}
+.product-row.clickable a.read-more { position: static; }
+.product-row.clickable a.read-more::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 1;
+}
+.product-row.clickable > * { position: relative; z-index: 2; }
+.product-row.clickable a.read-more { z-index: 3; }
+
 /* Card variant: on brown (dark) band */
 .card.on-dark { border-top-color: rgba(245,239,223,0.25); }
 .card.on-dark .card-num { color: var(--copper-light); }
