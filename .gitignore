@@ -13,3 +13,8 @@ dist/
 # Env
 .env
 .env.local
+
+# Internal strategy / source docs (not to be published with the site)
+*.pdf
+*.docx
+*.doc
