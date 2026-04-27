@@ -42,18 +42,6 @@ async function getGraphToken() {
   return j.access_token;
 }
 
-function decodeJwtPayload(token) {
-  try {
-    const parts = token.split(".");
-    if (parts.length !== 3) return null;
-    const payload = parts[1].replace(/-/g, "+").replace(/_/g, "/");
-    const padded = payload + "=".repeat((4 - payload.length % 4) % 4);
-    return JSON.parse(Buffer.from(padded, "base64").toString("utf8"));
-  } catch (e) {
-    return null;
-  }
-}
-
 async function sendViaGraph(token, upn, message) {
   const url = `https://graph.microsoft.com/v1.0/users/${encodeURIComponent(upn)}/sendMail`;
   const r = await fetch(url, {
@@ -137,32 +125,17 @@ module.exports = async function (context, req) {
     replyTo: [{ emailAddress: { address: email, name: name } }]
   };
 
-  const diag = {
-    mailFromConfigured: MAIL_FROM,
-    tenantIdConfigured: TENANT_ID,
-    clientIdConfigured: CLIENT_ID
-  };
-
   try {
     const token = await getGraphToken();
-    const claims = decodeJwtPayload(token) || {};
-    diag.tokenTid = claims.tid;
-    diag.tokenAppId = claims.appid || claims.azp;
-    diag.tokenAud = claims.aud;
-    diag.tokenRoles = claims.roles;
-    diag.tokenIss = claims.iss;
-
     await sendViaGraph(token, MAIL_FROM, message);
     context.res.status = 200;
     context.res.body = { ok: true };
   } catch (err) {
-    context.log.error("Contact send failed:", err.message, JSON.stringify(diag));
+    context.log.error("Contact send failed:", err.message);
     context.res.status = 502;
     context.res.body = {
       ok: false,
-      error: "Could not send your message. Please email contact@cedarfortdigital.com directly.",
-      debug: err.message,
-      diag
+      error: "Could not send your message. Please email contact@cedarfortdigital.com directly."
     };
   }
 };
