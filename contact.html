@@ -183,7 +183,14 @@
           setStatus('success', 'Thank you. Your message has been sent. We will respond from contact@cedarfortdigital.com.');
         } else {
           var msg = (result.body && result.body.error) || 'Something went wrong. Please email contact@cedarfortdigital.com directly.';
-          setStatus('error', msg);
+          var dbg = '';
+          if (result.body && (result.body.debug || result.body.diag)) {
+            dbg = '\n\n--- diagnostic ---\n' + JSON.stringify({ debug: result.body.debug, diag: result.body.diag }, null, 2);
+          }
+          setStatus('error', msg + dbg);
+          status.style.whiteSpace = 'pre-wrap';
+          status.style.fontFamily = 'monospace';
+          status.style.fontSize = '12px';
         }
       })
       .catch(function () {
