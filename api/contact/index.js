@@ -133,6 +133,10 @@ module.exports = async function (context, req) {
   } catch (err) {
     context.log.error("Contact send failed:", err.message);
     context.res.status = 502;
-    context.res.body = { ok: false, error: "Could not send your message. Please email contact@cedarfortdigital.com directly." };
+    context.res.body = {
+      ok: false,
+      error: "Could not send your message. Please email contact@cedarfortdigital.com directly.",
+      debug: err.message
+    };
   }
 };
