@@ -54,17 +54,8 @@ function decodeJwtPayload(token) {
   }
 }
 
-async function probeUser(token, upn) {
-  const url = `https://graph.microsoft.com/v1.0/users/${encodeURIComponent(upn)}?$select=id,userPrincipalName,mail,mailNickname,accountEnabled,assignedLicenses,proxyAddresses`;
-  const r = await fetch(url, {
-    headers: { Authorization: `Bearer ${token}` }
-  });
-  const text = await r.text();
-  return { status: r.status, ok: r.ok, body: text };
-}
-
-async function sendViaGraphById(token, userId, message) {
-  const url = `https://graph.microsoft.com/v1.0/users/${userId}/sendMail`;
+async function sendViaGraph(token, upn, message) {
+  const url = `https://graph.microsoft.com/v1.0/users/${encodeURIComponent(upn)}/sendMail`;
   const r = await fetch(url, {
     method: "POST",
     headers: {
@@ -161,24 +152,7 @@ module.exports = async function (context, req) {
     diag.tokenRoles = claims.roles;
     diag.tokenIss = claims.iss;
 
-    const userProbe = await probeUser(token, MAIL_FROM);
-    diag.userProbeStatus = userProbe.status;
-
-    if (!userProbe.ok) {
-      diag.userProbeBody = userProbe.body;
-      throw new Error("USER_LOOKUP_FAILED");
-    }
-
-    const user = JSON.parse(userProbe.body);
-    diag.userId = user.id;
-    diag.userPrincipalName = user.userPrincipalName;
-    diag.userMail = user.mail;
-    diag.userMailNickname = user.mailNickname;
-    diag.userAccountEnabled = user.accountEnabled;
-    diag.userHasLicenses = Array.isArray(user.assignedLicenses) && user.assignedLicenses.length > 0;
-    diag.userProxyAddresses = user.proxyAddresses;
-
-    await sendViaGraphById(token, user.id, message);
+    await sendViaGraph(token, MAIL_FROM, message);
     context.res.status = 200;
     context.res.body = { ok: true };
   } catch (err) {
