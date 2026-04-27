@@ -1,0 +1,17 @@
+{
+  "routes": [
+    {
+      "route": "/api/contact",
+      "methods": ["POST"],
+      "allowedRoles": ["anonymous"]
+    },
+    {
+      "route": "/api/*",
+      "statusCode": 404
+    }
+  ],
+  "globalHeaders": {
+    "X-Content-Type-Options": "nosniff",
+    "Referrer-Policy": "strict-origin-when-cross-origin"
+  }
+}

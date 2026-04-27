@@ -71,15 +71,15 @@
 </div>
 <div style="margin-top:32px">
 <h5 style="margin-bottom:14px;color:var(--copper)">Direct</h5>
-<p style="font-size:16px;margin:0 0 6px"><a href="mailto:Rachel.Latham@cedarfortdigital.com" style="color:var(--ink);border-bottom:1px solid var(--ink);padding-bottom:1px">Rachel.Latham@cedarfortdigital.com</a></p>
+<p style="font-size:16px;margin:0 0 6px"><a href="https://www.linkedin.com/in/rachellathamcfd/" target="_blank" rel="noopener" style="color:var(--ink);border-bottom:1px solid var(--ink);padding-bottom:1px">Rachel Latham &mdash; LinkedIn</a></p>
+<p style="font-size:16px;margin:0 0 6px"><a href="https://www.linkedin.com/in/chris-soskin/" target="_blank" rel="noopener" style="color:var(--ink);border-bottom:1px solid var(--ink);padding-bottom:1px">Chris Soskin &mdash; LinkedIn</a></p>
 <p style="font-size:16px;margin:0 0 6px"><a href="tel:9046076702" style="color:var(--ink);border-bottom:1px solid var(--ink);padding-bottom:1px">(904) 607-6702</a></p>
 <p style="font-size:14px;color:var(--ink-mid);margin:10px 0 0;font-style:italic;font-family:'Fraunces',serif">Northeast Florida</p>
 </div>
 </div>
 
-<form class="contact-form" id="contact-form" method="post" action="https://formspree.io/f/xdaypyeb">
-<input type="hidden" name="_subject" value="New contact from cedarfortdigital.com">
-<input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+<form class="contact-form" id="contact-form" novalidate>
+<input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
 <div class="row">
 <div class="field">
 <label for="name">Name</label>
@@ -131,8 +131,72 @@
 <label for="systems">What systems are you trying to govern?</label>
 <textarea id="systems" name="systems" rows="5" placeholder="AI models, automated decisioning, vendor dependencies, workflows, compliance environment, &hellip;"></textarea>
 </div>
-<button type="submit" class="btn btn-primary submit" style="width:100%;justify-content:center;padding:18px">Send</button>
+<button type="submit" class="btn btn-primary submit" id="contact-submit" style="width:100%;justify-content:center;padding:18px">Send</button>
+<div id="contact-status" role="status" aria-live="polite" style="margin-top:14px;font-size:14px;line-height:1.5"></div>
 </form>
+<script>
+(function () {
+  var form = document.getElementById('contact-form');
+  var btn = document.getElementById('contact-submit');
+  var status = document.getElementById('contact-status');
+  if (!form || !btn || !status) return;
+
+  function setStatus(kind, msg) {
+    var palette = {
+      info:    { bg: '#f4efe6', fg: '#1a1a1a', bd: '#b87333' },
+      success: { bg: '#eaf3ee', fg: '#0f4d4a', bd: '#0f4d4a' },
+      error:   { bg: '#fbeceb', fg: '#7a1f1a', bd: '#7a1f1a' }
+    };
+    var p = palette[kind] || palette.info;
+    status.style.background = p.bg;
+    status.style.color = p.fg;
+    status.style.borderLeft = '3px solid ' + p.bd;
+    status.style.padding = '10px 14px';
+    status.textContent = msg;
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var data = {};
+    var fd = new FormData(form);
+    fd.forEach(function (v, k) { data[k] = v; });
+
+    btn.disabled = true;
+    btn.setAttribute('aria-busy', 'true');
+    var original = btn.textContent;
+    btn.textContent = 'Sending…';
+    setStatus('info', 'Sending your message…');
+
+    fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(data)
+    })
+      .then(function (r) {
+        return r.json().then(function (j) { return { ok: r.ok, body: j }; }).catch(function () {
+          return { ok: r.ok, body: { ok: r.ok, error: 'Unexpected response.' } };
+        });
+      })
+      .then(function (result) {
+        if (result.ok && result.body && result.body.ok) {
+          form.reset();
+          setStatus('success', 'Thank you. Your message has been sent. We will respond from contact@cedarfortdigital.com.');
+        } else {
+          var msg = (result.body && result.body.error) || 'Something went wrong. Please email contact@cedarfortdigital.com directly.';
+          setStatus('error', msg);
+        }
+      })
+      .catch(function () {
+        setStatus('error', 'Network error. Please email contact@cedarfortdigital.com directly.');
+      })
+      .finally(function () {
+        btn.disabled = false;
+        btn.removeAttribute('aria-busy');
+        btn.textContent = original;
+      });
+  });
+})();
+</script>
 
 </div>
 </div>

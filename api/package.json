@@ -1,0 +1,9 @@
+{
+  "name": "cedarfortdigital-api",
+  "version": "1.0.0",
+  "description": "Azure Functions API for cedarfortdigital.com (contact form via Microsoft Graph).",
+  "private": true,
+  "engines": {
+    "node": ">=18"
+  }
+}
