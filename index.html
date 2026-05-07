@@ -52,6 +52,37 @@
 </div>
 </nav>
 
+<!-- FOUNDER'S STORY VIDEO -->
+<section class="section-warm" id="founders-video">
+<div class="container">
+<div class="section-header">
+<span class="eyebrow">Why we built Stronghold</span>
+<h2>The story behind Cedar Fort Digital.</h2>
+</div>
+<div style="max-width:960px;margin:0 auto">
+<div style="position: relative; overflow: hidden; aspect-ratio: 1920/1080; background:#000">
+<iframe id="founders-video-iframe" src="https://share.synthesia.io/embeds/videos/5511423a-d32d-47fe-aaa6-e2b2b5b2cd25?autoplay=true&muted=true" loading="eager" title="Synthesia video player - Cedar Fort Digital Founder's Story" allowfullscreen allow="autoplay; encrypted-media; fullscreen; microphone; screen-wake-lock;" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0; margin: 0; overflow:hidden;"></iframe>
+<button type="button" id="video-sound-toggle" aria-label="Turn sound on" style="position:absolute;bottom:16px;right:16px;z-index:2;background:rgba(26,17,8,0.82);color:#F5EFDF;border:1px solid rgba(245,239,223,0.45);border-radius:999px;padding:10px 18px;font-family:inherit;font-size:14px;font-weight:600;letter-spacing:0.02em;cursor:pointer">&#128264; Click for sound</button>
+</div>
+</div>
+</div>
+</section>
+<script>
+(function(){
+  var btn = document.getElementById('video-sound-toggle');
+  var iframe = document.getElementById('founders-video-iframe');
+  if (!btn || !iframe) return;
+  var muted = true;
+  btn.addEventListener('click', function(){
+    muted = !muted;
+    var base = iframe.src.split('?')[0];
+    iframe.src = base + '?autoplay=true&muted=' + (muted ? 'true' : 'false');
+    btn.innerHTML = muted ? '&#128264; Click for sound' : '&#128263; Mute';
+    btn.setAttribute('aria-label', muted ? 'Turn sound on' : 'Mute');
+  });
+})();
+</script>
+
 <!-- HERO -->
 <section class="hero">
 <div class="container">
@@ -69,19 +100,6 @@
 <a href="contact.html" class="btn btn-copper">Request a Demo</a>
 <a href="contact.html" class="btn btn-ghost">Discuss a Pilot</a>
 <a href="contact.html" class="btn btn-ghost">Request Detailed Mapping Under NDA</a>
-</div>
-</div>
-</section>
-
-<!-- FOUNDER'S STORY VIDEO -->
-<section class="section-warm">
-<div class="container">
-<div class="section-header">
-<span class="eyebrow">Why we built Stronghold</span>
-<h2>The story behind Cedar Fort Digital.</h2>
-</div>
-<div style="max-width:960px;margin:0 auto">
-<div style="position: relative; overflow: hidden; aspect-ratio: 1920/1080"><iframe src="https://share.synthesia.io/embeds/videos/5511423a-d32d-47fe-aaa6-e2b2b5b2cd25" loading="lazy" title="Synthesia video player - Cedar Fort Digital Founder's Story" allowfullscreen allow="encrypted-media; fullscreen; microphone; screen-wake-lock;" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0; margin: 0; overflow:hidden;"></iframe></div>
 </div>
 </div>
 </section>
