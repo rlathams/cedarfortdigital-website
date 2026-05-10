@@ -12,7 +12,7 @@ Static HTML — no build step. Open `index.html` locally to preview.
 
 ```
 index.html                       Homepage
-assurance-by-design.html         Assurance by Design™ framework
+governance-by-design.html         Governance by Design™ framework
 products.html                    Products overview (5 components)
 assurance-operations-engine.html Stronghold Assurance Operations Engine™
 enforce.html                     Stronghold Enforce™
