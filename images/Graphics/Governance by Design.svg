@@ -6,7 +6,7 @@
   <text x="800" y="125" text-anchor="middle" font-size="16" font-weight="700" letter-spacing="4" fill="#7D4820">FRAMEWORK OPERATING MODEL &#183; FOUR-LAYER GOVERNANCE STACK</text>
 
   <!-- OUTER CONTAINER -->
-  <rect x="60" y="160" width="900" height="820" fill="none" stroke="#1A1108" stroke-width="2.5"/>
+  <rect x="60" y="160" width="910" height="820" fill="none" stroke="#1A1108" stroke-width="2.5"/>
 
   <!-- ROW 1: Operational System (2-line label) -->
   <g transform="translate(85 190)">
