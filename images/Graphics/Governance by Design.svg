@@ -169,15 +169,15 @@
 
   <!-- GOVERNANCE FEEDBACK LOOP: three curved arrows, labels outside, narrative in center -->
   <text x="1265" y="915" text-anchor="middle" font-size="19" font-weight="700" letter-spacing="3" fill="#963B3B">GOVERNANCE FEEDBACK LOOP</text>
-  <g transform="translate(1265 1095)">
+  <g transform="translate(1265 1120)">
     <!-- Top label: Threshold Breach (moved down to sit closer to the loop, with a gap above for separation from the eyebrow title) -->
     <text x="0" y="-125" text-anchor="middle" font-family="'Fraunces', Georgia, serif" font-size="24" font-weight="600" fill="#1A1108">Threshold Breach</text>
 
-    <!-- Bottom-right label: Review (shifted out to clear the new arrowhead position) -->
-    <text x="150" y="95" text-anchor="middle" font-family="'Fraunces', Georgia, serif" font-size="24" font-weight="600" fill="#1A1108">Review</text>
+    <!-- Bottom-right label: Review (nudged out + up to sit in the right-side gap between arrows) -->
+    <text x="160" y="88" text-anchor="middle" font-family="'Fraunces', Georgia, serif" font-size="24" font-weight="600" fill="#1A1108">Review</text>
 
-    <!-- Bottom-left label: Adjust (shifted out to clear the new arrowhead position) -->
-    <text x="-150" y="95" text-anchor="middle" font-family="'Fraunces', Georgia, serif" font-size="24" font-weight="600" fill="#1A1108">Adjust</text>
+    <!-- Bottom-left label: Adjust (nudged out + up to sit in the left-side gap between arrows) -->
+    <text x="-160" y="88" text-anchor="middle" font-family="'Fraunces', Georgia, serif" font-size="24" font-weight="600" fill="#1A1108">Adjust</text>
 
     <!-- Arrow 1 (Breach -> Review): Prove blue, 290° to 10° -->
     <path d="M 37.6 -103.4 A 110 110 0 0 1 108.35 19.14" fill="none" stroke="#2E7DA8" stroke-width="11" stroke-linecap="butt"/>
