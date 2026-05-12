@@ -170,8 +170,8 @@
   <!-- GOVERNANCE FEEDBACK LOOP: three curved arrows, labels outside, narrative in center -->
   <text x="1265" y="915" text-anchor="middle" font-size="19" font-weight="700" letter-spacing="3" fill="#963B3B">GOVERNANCE FEEDBACK LOOP</text>
   <g transform="translate(1265 1120)">
-    <!-- Top label: Threshold Breach (moved down to sit closer to the loop, with a gap above for separation from the eyebrow title) -->
-    <text x="0" y="-125" text-anchor="middle" font-family="'Fraunces', Georgia, serif" font-size="24" font-weight="600" fill="#1A1108">Threshold Breach</text>
+    <!-- Top label: Threshold Breach (lifted further from the loop top so it doesn't crowd the arrows) -->
+    <text x="0" y="-145" text-anchor="middle" font-family="'Fraunces', Georgia, serif" font-size="24" font-weight="600" fill="#1A1108">Threshold Breach</text>
 
     <!-- Bottom-right label: Review (nudged out + up to sit in the right-side gap between arrows) -->
     <text x="160" y="88" text-anchor="middle" font-family="'Fraunces', Georgia, serif" font-size="24" font-weight="600" fill="#1A1108">Review</text>
