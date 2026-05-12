@@ -173,11 +173,11 @@
     <!-- Top label: Threshold Breach (moved down to sit closer to the loop, with a gap above for separation from the eyebrow title) -->
     <text x="0" y="-125" text-anchor="middle" font-family="'Fraunces', Georgia, serif" font-size="24" font-weight="600" fill="#1A1108">Threshold Breach</text>
 
-    <!-- Bottom-right label: Review (radius 150, angle 30°) -->
-    <text x="130" y="80" text-anchor="middle" font-family="'Fraunces', Georgia, serif" font-size="24" font-weight="600" fill="#1A1108">Review</text>
+    <!-- Bottom-right label: Review (shifted out to clear the new arrowhead position) -->
+    <text x="150" y="95" text-anchor="middle" font-family="'Fraunces', Georgia, serif" font-size="24" font-weight="600" fill="#1A1108">Review</text>
 
-    <!-- Bottom-left label: Adjust (radius 150, angle 150°) -->
-    <text x="-130" y="80" text-anchor="middle" font-family="'Fraunces', Georgia, serif" font-size="24" font-weight="600" fill="#1A1108">Adjust</text>
+    <!-- Bottom-left label: Adjust (shifted out to clear the new arrowhead position) -->
+    <text x="-150" y="95" text-anchor="middle" font-family="'Fraunces', Georgia, serif" font-size="24" font-weight="600" fill="#1A1108">Adjust</text>
 
     <!-- Arrow 1 (Breach -> Review): Prove blue, 290° to 10° -->
     <path d="M 37.6 -103.4 A 110 110 0 0 1 108.35 19.14" fill="none" stroke="#2E7DA8" stroke-width="11" stroke-linecap="butt"/>
