@@ -180,19 +180,19 @@
     <text x="-130" y="80" text-anchor="middle" font-family="'Fraunces', Georgia, serif" font-size="24" font-weight="600" fill="#1A1108">Adjust</text>
 
     <!-- Arrow 1 (Breach -> Review): Prove blue, 290° to 10° -->
-    <path d="M 37.6 -103.4 A 110 110 0 0 1 108.35 19.14" fill="none" stroke="#2E7DA8" stroke-width="11" stroke-linecap="round"/>
+    <path d="M 37.6 -103.4 A 110 110 0 0 1 108.35 19.14" fill="none" stroke="#2E7DA8" stroke-width="11" stroke-linecap="butt"/>
     <g transform="translate(108.35 19.14) rotate(10)">
       <polygon points="0,0 -13,-22 13,-22" fill="#2E7DA8"/>
     </g>
 
     <!-- Arrow 2 (Review -> Adjust): Enforce deep blue, 50° to 130° -->
-    <path d="M 70.73 84.26 A 110 110 0 0 1 -70.73 84.26" fill="none" stroke="#1F4F75" stroke-width="11" stroke-linecap="round"/>
+    <path d="M 70.73 84.26 A 110 110 0 0 1 -70.73 84.26" fill="none" stroke="#1F4F75" stroke-width="11" stroke-linecap="butt"/>
     <g transform="translate(-70.73 84.26) rotate(130)">
       <polygon points="0,0 -13,-22 13,-22" fill="#1F4F75"/>
     </g>
 
     <!-- Arrow 3 (Adjust -> Breach): Trace teal, 170° to 250° -->
-    <path d="M -108.35 19.14 A 110 110 0 0 1 -37.6 -103.4" fill="none" stroke="#5BA8C2" stroke-width="11" stroke-linecap="round"/>
+    <path d="M -108.35 19.14 A 110 110 0 0 1 -37.6 -103.4" fill="none" stroke="#5BA8C2" stroke-width="11" stroke-linecap="butt"/>
     <g transform="translate(-37.6 -103.4) rotate(250)">
       <polygon points="0,0 -13,-22 13,-22" fill="#5BA8C2"/>
     </g>
