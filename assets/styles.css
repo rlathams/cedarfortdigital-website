@@ -1170,7 +1170,7 @@ footer.site-footer .footer-top {
 @media (max-width: 600px) { footer.site-footer .footer-top { grid-template-columns: 1fr; } }
 footer.site-footer .brand-block { display: flex; flex-direction: column; gap: 18px; }
 footer.site-footer .brand-row { display: flex; align-items: center; gap: 12px; }
-footer.site-footer .brand-row img { height: 56px; width: auto; }
+footer.site-footer .brand-row img { height: 56px; width: auto; background: var(--cream); padding: 6px 8px; border-radius: 2px; }
 footer.site-footer .brand-row span {
   font-family: 'Fraunces', serif;
   color: var(--cream);
