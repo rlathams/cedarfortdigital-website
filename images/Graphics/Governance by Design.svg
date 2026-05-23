@@ -149,26 +149,26 @@
 
   <!-- REQUIREMENT box -->
   <g transform="translate(990 490)">
-    <rect width="570" height="160" rx="4" fill="#E5F0F7" stroke="#5BA8C2" stroke-width="2.5"/>
+    <rect width="570" height="170" rx="4" fill="#E5F0F7" stroke="#5BA8C2" stroke-width="2.5"/>
     <text x="285" y="40" text-anchor="middle" font-size="16" font-weight="700" letter-spacing="2" fill="#1F4F75">REQUIREMENT</text>
-    <text x="285" y="80" text-anchor="middle" font-size="22" fill="#1A1108">The deterministic decision engine</text>
-    <text x="285" y="110" text-anchor="middle" font-size="22" fill="#1A1108">must emit <tspan font-weight="700">verifiable decision</tspan></text>
-    <text x="285" y="140" text-anchor="middle" font-size="22" fill="#1A1108"><tspan font-weight="700">records</tspan> into the immutable ledger.</text>
+    <text x="285" y="82" text-anchor="middle" font-size="22" fill="#1A1108">The deterministic decision engine</text>
+    <text x="285" y="116" text-anchor="middle" font-size="22" fill="#1A1108">must emit <tspan font-weight="700">verifiable decision</tspan></text>
+    <text x="285" y="150" text-anchor="middle" font-size="22" fill="#1A1108"><tspan font-weight="700">records</tspan> into the immutable ledger.</text>
   </g>
 
   <!-- VENDOR AI GOVERNANCE box -->
-  <g transform="translate(990 660)">
-    <rect width="570" height="200" rx="4" fill="#FBE6D2" stroke="#C97432" stroke-width="2.5"/>
+  <g transform="translate(990 670)">
+    <rect width="570" height="230" rx="4" fill="#FBE6D2" stroke="#C97432" stroke-width="2.5"/>
     <text x="285" y="40" text-anchor="middle" font-size="16" font-weight="700" letter-spacing="2" fill="#7D4820">THIRD-PARTY GOVERNANCE</text>
-    <text x="285" y="78" text-anchor="middle" font-size="22" fill="#1A1108">The same stack governs any</text>
-    <text x="285" y="106" text-anchor="middle" font-size="22" fill="#1A1108">vendor system. <tspan font-weight="700">No separate regime.</tspan></text>
-    <text x="285" y="142" text-anchor="middle" font-size="21" fill="#1A1108"><tspan font-weight="700">Pattern 14</tspan> detects Third-Party AI Risk</text>
-    <text x="285" y="168" text-anchor="middle" font-size="21" fill="#1A1108">and routes signals to the Governance Architect.</text>
-    <text x="285" y="192" text-anchor="middle" font-size="19" fill="#7D4820" font-style="italic">Zero-trust boundary &#183; tier classification &#183; AI clauses</text>
+    <text x="285" y="82" text-anchor="middle" font-size="22" fill="#1A1108">The same stack governs any</text>
+    <text x="285" y="116" text-anchor="middle" font-size="22" fill="#1A1108">vendor system. <tspan font-weight="700">No separate regime.</tspan></text>
+    <text x="285" y="156" text-anchor="middle" font-size="21" fill="#1A1108"><tspan font-weight="700">Pattern 14</tspan> detects Third-Party AI Risk</text>
+    <text x="285" y="188" text-anchor="middle" font-size="21" fill="#1A1108">and routes signals to the Governance Architect.</text>
+    <text x="285" y="218" text-anchor="middle" font-size="19" fill="#7D4820" font-style="italic">Zero-trust boundary &#183; tier classification &#183; AI clauses</text>
   </g>
 
   <!-- GOVERNANCE FEEDBACK LOOP: three curved arrows, labels outside, narrative in center -->
-  <text x="1265" y="915" text-anchor="middle" font-size="19" font-weight="700" letter-spacing="3" fill="#963B3B">GOVERNANCE FEEDBACK LOOP</text>
+  <text x="1265" y="938" text-anchor="middle" font-size="19" font-weight="700" letter-spacing="3" fill="#963B3B">GOVERNANCE FEEDBACK LOOP</text>
   <g transform="translate(1265 1120)">
     <!-- Top label: Threshold Breach (lifted further from the loop top so it doesn't crowd the arrows) -->
     <text x="0" y="-145" text-anchor="middle" font-family="'Fraunces', Georgia, serif" font-size="24" font-weight="600" fill="#1A1108">Threshold Breach</text>
